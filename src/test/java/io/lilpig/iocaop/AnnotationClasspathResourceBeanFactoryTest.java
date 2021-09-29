@@ -7,8 +7,10 @@ import org.junit.Test;
 public class AnnotationClasspathResourceBeanFactoryTest {
     @Test
     public void testScanAndInjection() {
-        AnnotationClasspathResourceBeanFactory beanFactory = new AnnotationClasspathResourceBeanFactory();
+        AnnotationClasspathResourceBeanFactory beanFactory
+                = new AnnotationClasspathResourceBeanFactory();
         beanFactory.init();
+
         Fighter fighter = beanFactory.getBean(Fighter.class);
         fighter.explore();
     }
